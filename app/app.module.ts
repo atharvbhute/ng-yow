@@ -9,6 +9,7 @@ import { MainProfileComponent } from './profile/main-profile/main-profile.compon
 import { routing, appRoutingProviders } from "app/app.routing";
 import { AUTH_PROVIDERS } from "angular2-jwt";
 import { Auth } from "app/services/auth.service";
+import { AuthGuard } from "app/auth.gaurd";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Auth } from "app/services/auth.service";
   providers: [
     appRoutingProviders,
     AUTH_PROVIDERS,
-    Auth
+    Auth,
+    AuthGuard
     ],
   bootstrap: [AppComponent]
 })
